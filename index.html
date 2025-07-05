@@ -1,1 +1,90 @@
-console.log('hiii')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-star"></i>
+            Inbox
+        </div>
+        <div>
+            <button class="btn-ai">
+                <i class="fas fa-magic"></i>
+                Assistant
+            </button>
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face"
+                alt="Profile" class="profile-avatar">
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item active">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search reviews..." id="searchInput">
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All (0)</button>
+                <button class="filter-tab" data-filter="unread">Unread (0)</button>
+                <button class="filter-tab" data-filter="priority">Priority (0)</button>
+                <button class="filter-tab" data-filter="unreplied">Un-replied (0)</button>
+            </div>
+
+            <!-- Reviews List -->
+            <div class="reviews-list" id="reviewsList">
+                <!-- Reviews loaded by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Review Detail Panel -->
+        <div class="review-detail-panel">
+            <h3>Review Details</h3>
+            <div id="reviewDetailContent">
+                <div style="text-align: center; color: #666; padding: 40px;">
+                    Select a review to view details
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/review.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
